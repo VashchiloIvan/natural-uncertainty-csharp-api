@@ -8,21 +8,22 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
-public class TaskStep : global::System.IDisposable {
+public class Alternative : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal TaskStep(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal Alternative(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(TaskStep obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Alternative obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(TaskStep obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(Alternative obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -35,7 +36,7 @@ public class TaskStep : global::System.IDisposable {
     }
   }
 
-  ~TaskStep() {
+  ~Alternative() {
     Dispose(false);
   }
 
@@ -49,49 +50,52 @@ public class TaskStep : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_TaskStep(swigCPtr);
+          natural_uncertainty_libPINVOKE.delete_Alternative(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public TaskStep(string type, string step) : this(natural_uncertainty_libPINVOKE.new_TaskStep__SWIG_0(type, step), true) {
+  public Alternative(string name, DoubleList marks) : this(natural_uncertainty_libPINVOKE.new_Alternative(name, DoubleList.getCPtr(marks)), true) {
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public TaskStep(string type, StringList row) : this(natural_uncertainty_libPINVOKE.new_TaskStep__SWIG_1(type, StringList.getCPtr(row)), true) {
+  public string getName() {
+    string ret = natural_uncertainty_libPINVOKE.Alternative_getName(swigCPtr);
+    return ret;
+  }
+
+  public DoubleList getMarks() {
+    DoubleList ret = new DoubleList(natural_uncertainty_libPINVOKE.Alternative_getMarks(swigCPtr), true);
+    return ret;
+  }
+
+  public void setMarks(DoubleList marks) {
+    natural_uncertainty_libPINVOKE.Alternative_setMarks(swigCPtr, DoubleList.getCPtr(marks));
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static TaskStep TextType(string step) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_TextType(step);
-    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public double minMark() {
+    double ret = natural_uncertainty_libPINVOKE.Alternative_minMark(swigCPtr);
     return ret;
   }
 
-  public static TaskStep TablePartType(string type, StringList row) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_TablePartType(type, StringList.getCPtr(row));
-    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public double maxMark() {
+    double ret = natural_uncertainty_libPINVOKE.Alternative_maxMark(swigCPtr);
     return ret;
   }
 
-  public static TaskStep EndTableType() {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_EndTableType();
-    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
+  public double sumOfMarks() {
+    double ret = natural_uncertainty_libPINVOKE.Alternative_sumOfMarks(swigCPtr);
     return ret;
   }
 
-  public string StepType() {
-    string ret = natural_uncertainty_libPINVOKE.TaskStep_StepType(swigCPtr);
+  public double avgOfMarks() {
+    double ret = natural_uncertainty_libPINVOKE.Alternative_avgOfMarks(swigCPtr);
     return ret;
   }
 
-  public string AsString() {
-    string ret = natural_uncertainty_libPINVOKE.TaskStep_AsString(swigCPtr);
-    return ret;
-  }
+}
 
 }

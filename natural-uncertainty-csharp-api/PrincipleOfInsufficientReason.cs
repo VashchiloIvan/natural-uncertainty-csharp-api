@@ -8,19 +8,20 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
-public class OptimismPessimismCriterion : Criterion {
+public class PrincipleOfInsufficientReason : Criterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal OptimismPessimismCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(natural_uncertainty_libPINVOKE.OptimismPessimismCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal PrincipleOfInsufficientReason(global::System.IntPtr cPtr, bool cMemoryOwn) : base(natural_uncertainty_libPINVOKE.PrincipleOfInsufficientReason_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(OptimismPessimismCriterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(PrincipleOfInsufficientReason obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(OptimismPessimismCriterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(PrincipleOfInsufficientReason obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -38,7 +39,7 @@ public class OptimismPessimismCriterion : Criterion {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_OptimismPessimismCriterion(swigCPtr);
+          natural_uncertainty_libPINVOKE.delete_PrincipleOfInsufficientReason(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -46,13 +47,15 @@ public class OptimismPessimismCriterion : Criterion {
     }
   }
 
-  public OptimismPessimismCriterion(MathModel mathModel, double optimismKoef) : this(natural_uncertainty_libPINVOKE.new_OptimismPessimismCriterion(MathModel.getCPtr(mathModel), optimismKoef), true) {
+  public PrincipleOfInsufficientReason(MathModel mathModel) : this(natural_uncertainty_libPINVOKE.new_PrincipleOfInsufficientReason(MathModel.getCPtr(mathModel)), true) {
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override SolveStatus solve() {
-    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.OptimismPessimismCriterion_solve(swigCPtr), true);
+    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.PrincipleOfInsufficientReason_solve(swigCPtr), true);
     return ret;
   }
+
+}
 
 }

@@ -8,22 +8,23 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
-public class AlternativeList : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<Alternative>
+public class TaskProcess : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<TaskStep>
  {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal AlternativeList(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal TaskProcess(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(AlternativeList obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(TaskProcess obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(AlternativeList obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(TaskProcess obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,7 +37,7 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
     }
   }
 
-  ~AlternativeList() {
+  ~TaskProcess() {
     Dispose(false);
   }
 
@@ -50,25 +51,25 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_AlternativeList(swigCPtr);
+          natural_uncertainty_libPINVOKE.delete_TaskProcess(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public AlternativeList(global::System.Collections.IEnumerable c) : this() {
+  public TaskProcess(global::System.Collections.IEnumerable c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (Alternative element in c) {
+    foreach (TaskStep element in c) {
       this.Add(element);
     }
   }
 
-  public AlternativeList(global::System.Collections.Generic.IEnumerable<Alternative> c) : this() {
+  public TaskProcess(global::System.Collections.Generic.IEnumerable<TaskStep> c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (Alternative element in c) {
+    foreach (TaskStep element in c) {
       this.Add(element);
     }
   }
@@ -85,7 +86,7 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
     }
   }
 
-  public Alternative this[int index]  {
+  public TaskStep this[int index]  {
     get {
       return getitem(index);
     }
@@ -123,17 +124,17 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
     }
   }
 
-  public void CopyTo(Alternative[] array)
+  public void CopyTo(TaskStep[] array)
   {
     CopyTo(0, array, 0, this.Count);
   }
 
-  public void CopyTo(Alternative[] array, int arrayIndex)
+  public void CopyTo(TaskStep[] array, int arrayIndex)
   {
     CopyTo(0, array, arrayIndex, this.Count);
   }
 
-  public void CopyTo(int index, Alternative[] array, int arrayIndex, int count)
+  public void CopyTo(int index, TaskStep[] array, int arrayIndex, int count)
   {
     if (array == null)
       throw new global::System.ArgumentNullException("array");
@@ -151,22 +152,22 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
       array.SetValue(getitemcopy(index+i), arrayIndex+i);
   }
 
-  public Alternative[] ToArray() {
-    Alternative[] array = new Alternative[this.Count];
+  public TaskStep[] ToArray() {
+    TaskStep[] array = new TaskStep[this.Count];
     this.CopyTo(array);
     return array;
   }
 
-  global::System.Collections.Generic.IEnumerator<Alternative> global::System.Collections.Generic.IEnumerable<Alternative>.GetEnumerator() {
-    return new AlternativeListEnumerator(this);
+  global::System.Collections.Generic.IEnumerator<TaskStep> global::System.Collections.Generic.IEnumerable<TaskStep>.GetEnumerator() {
+    return new TaskProcessEnumerator(this);
   }
 
   global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new AlternativeListEnumerator(this);
+    return new TaskProcessEnumerator(this);
   }
 
-  public AlternativeListEnumerator GetEnumerator() {
-    return new AlternativeListEnumerator(this);
+  public TaskProcessEnumerator GetEnumerator() {
+    return new TaskProcessEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -174,15 +175,15 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class AlternativeListEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<Alternative>
+  public sealed class TaskProcessEnumerator : global::System.Collections.IEnumerator
+    , global::System.Collections.Generic.IEnumerator<TaskStep>
   {
-    private AlternativeList collectionRef;
+    private TaskProcess collectionRef;
     private int currentIndex;
     private object currentObject;
     private int currentSize;
 
-    public AlternativeListEnumerator(AlternativeList collection) {
+    public TaskProcessEnumerator(TaskProcess collection) {
       collectionRef = collection;
       currentIndex = -1;
       currentObject = null;
@@ -190,7 +191,7 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
     }
 
     // Type-safe iterator Current
-    public Alternative Current {
+    public TaskStep Current {
       get {
         if (currentIndex == -1)
           throw new global::System.InvalidOperationException("Enumeration not started.");
@@ -198,7 +199,7 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
           throw new global::System.InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new global::System.InvalidOperationException("Collection modified.");
-        return (Alternative)currentObject;
+        return (TaskStep)currentObject;
       }
     }
 
@@ -235,113 +236,136 @@ public class AlternativeList : global::System.IDisposable, global::System.Collec
     }
   }
 
-  public AlternativeList() : this(natural_uncertainty_libPINVOKE.new_AlternativeList__SWIG_0(), true) {
+  public TaskProcess() : this(natural_uncertainty_libPINVOKE.new_TaskProcess__SWIG_0(), true) {
   }
 
-  public AlternativeList(AlternativeList other) : this(natural_uncertainty_libPINVOKE.new_AlternativeList__SWIG_1(AlternativeList.getCPtr(other)), true) {
+  public TaskProcess(TaskProcess other) : this(natural_uncertainty_libPINVOKE.new_TaskProcess__SWIG_1(TaskProcess.getCPtr(other)), true) {
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Clear() {
-    natural_uncertainty_libPINVOKE.AlternativeList_Clear(swigCPtr);
+    natural_uncertainty_libPINVOKE.TaskProcess_Clear(swigCPtr);
   }
 
-  public void Add(Alternative x) {
-    natural_uncertainty_libPINVOKE.AlternativeList_Add(swigCPtr, Alternative.getCPtr(x));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public void Add(TaskStep x) {
+    natural_uncertainty_libPINVOKE.TaskProcess_Add(swigCPtr, TaskStep.getCPtr(x));
   }
 
   private uint size() {
-    uint ret = natural_uncertainty_libPINVOKE.AlternativeList_size(swigCPtr);
+    uint ret = natural_uncertainty_libPINVOKE.TaskProcess_size(swigCPtr);
     return ret;
   }
 
   private bool empty() {
-    bool ret = natural_uncertainty_libPINVOKE.AlternativeList_empty(swigCPtr);
+    bool ret = natural_uncertainty_libPINVOKE.TaskProcess_empty(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = natural_uncertainty_libPINVOKE.AlternativeList_capacity(swigCPtr);
+    uint ret = natural_uncertainty_libPINVOKE.TaskProcess_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    natural_uncertainty_libPINVOKE.AlternativeList_reserve(swigCPtr, n);
+    natural_uncertainty_libPINVOKE.TaskProcess_reserve(swigCPtr, n);
   }
 
-  public AlternativeList(int capacity) : this(natural_uncertainty_libPINVOKE.new_AlternativeList__SWIG_2(capacity), true) {
+  public TaskProcess(int capacity) : this(natural_uncertainty_libPINVOKE.new_TaskProcess__SWIG_2(capacity), true) {
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  private Alternative getitemcopy(int index) {
-    Alternative ret = new Alternative(natural_uncertainty_libPINVOKE.AlternativeList_getitemcopy(swigCPtr, index), true);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  private Alternative getitem(int index) {
-    Alternative ret = new Alternative(natural_uncertainty_libPINVOKE.AlternativeList_getitem(swigCPtr, index), false);
+  private TaskStep getitemcopy(int index) {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskProcess_getitemcopy(swigCPtr, index);
+    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private void setitem(int index, Alternative val) {
-    natural_uncertainty_libPINVOKE.AlternativeList_setitem(swigCPtr, index, Alternative.getCPtr(val));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void AddRange(AlternativeList values) {
-    natural_uncertainty_libPINVOKE.AlternativeList_AddRange(swigCPtr, AlternativeList.getCPtr(values));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public AlternativeList GetRange(int index, int count) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.AlternativeList_GetRange(swigCPtr, index, count);
-    AlternativeList ret = (cPtr == global::System.IntPtr.Zero) ? null : new AlternativeList(cPtr, true);
+  private TaskStep getitem(int index) {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskProcess_getitem(swigCPtr, index);
+    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void Insert(int index, Alternative x) {
-    natural_uncertainty_libPINVOKE.AlternativeList_Insert(swigCPtr, index, Alternative.getCPtr(x));
+  private void setitem(int index, TaskStep val) {
+    natural_uncertainty_libPINVOKE.TaskProcess_setitem(swigCPtr, index, TaskStep.getCPtr(val));
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void InsertRange(int index, AlternativeList values) {
-    natural_uncertainty_libPINVOKE.AlternativeList_InsertRange(swigCPtr, index, AlternativeList.getCPtr(values));
+  public void AddRange(TaskProcess values) {
+    natural_uncertainty_libPINVOKE.TaskProcess_AddRange(swigCPtr, TaskProcess.getCPtr(values));
+    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public TaskProcess GetRange(int index, int count) {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskProcess_GetRange(swigCPtr, index, count);
+    TaskProcess ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskProcess(cPtr, true);
+    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void Insert(int index, TaskStep x) {
+    natural_uncertainty_libPINVOKE.TaskProcess_Insert(swigCPtr, index, TaskStep.getCPtr(x));
+    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InsertRange(int index, TaskProcess values) {
+    natural_uncertainty_libPINVOKE.TaskProcess_InsertRange(swigCPtr, index, TaskProcess.getCPtr(values));
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    natural_uncertainty_libPINVOKE.AlternativeList_RemoveAt(swigCPtr, index);
+    natural_uncertainty_libPINVOKE.TaskProcess_RemoveAt(swigCPtr, index);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    natural_uncertainty_libPINVOKE.AlternativeList_RemoveRange(swigCPtr, index, count);
+    natural_uncertainty_libPINVOKE.TaskProcess_RemoveRange(swigCPtr, index, count);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static AlternativeList Repeat(Alternative value, int count) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.AlternativeList_Repeat(Alternative.getCPtr(value), count);
-    AlternativeList ret = (cPtr == global::System.IntPtr.Zero) ? null : new AlternativeList(cPtr, true);
+  public static TaskProcess Repeat(TaskStep value, int count) {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskProcess_Repeat(TaskStep.getCPtr(value), count);
+    TaskProcess ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskProcess(cPtr, true);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    natural_uncertainty_libPINVOKE.AlternativeList_Reverse__SWIG_0(swigCPtr);
+    natural_uncertainty_libPINVOKE.TaskProcess_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    natural_uncertainty_libPINVOKE.AlternativeList_Reverse__SWIG_1(swigCPtr, index, count);
+    natural_uncertainty_libPINVOKE.TaskProcess_Reverse__SWIG_1(swigCPtr, index, count);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetRange(int index, AlternativeList values) {
-    natural_uncertainty_libPINVOKE.AlternativeList_SetRange(swigCPtr, index, AlternativeList.getCPtr(values));
+  public void SetRange(int index, TaskProcess values) {
+    natural_uncertainty_libPINVOKE.TaskProcess_SetRange(swigCPtr, index, TaskProcess.getCPtr(values));
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
+
+  public bool Contains(TaskStep value) {
+    bool ret = natural_uncertainty_libPINVOKE.TaskProcess_Contains(swigCPtr, TaskStep.getCPtr(value));
+    return ret;
+  }
+
+  public int IndexOf(TaskStep value) {
+    int ret = natural_uncertainty_libPINVOKE.TaskProcess_IndexOf(swigCPtr, TaskStep.getCPtr(value));
+    return ret;
+  }
+
+  public int LastIndexOf(TaskStep value) {
+    int ret = natural_uncertainty_libPINVOKE.TaskProcess_LastIndexOf(swigCPtr, TaskStep.getCPtr(value));
+    return ret;
+  }
+
+  public bool Remove(TaskStep value) {
+    bool ret = natural_uncertainty_libPINVOKE.TaskProcess_Remove(swigCPtr, TaskStep.getCPtr(value));
+    return ret;
+  }
+
+}
 
 }

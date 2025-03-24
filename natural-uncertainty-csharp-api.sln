@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "natural-uncertainty-charp-api", "natural-uncertainty-charp-api\natural-uncertainty-charp-api.csproj", "{D1B9BA78-0DF3-4098-B4F5-9A98D0F1CB8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "natural-uncertainty-csharp-api", "natural-uncertainty-csharp-api\natural-uncertainty-csharp-api.csproj", "{D1B9BA78-0DF3-4098-B4F5-9A98D0F1CB8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

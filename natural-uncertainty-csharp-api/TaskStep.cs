@@ -8,21 +8,22 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
-public class MathModel : global::System.IDisposable {
+public class TaskStep : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal MathModel(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal TaskStep(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(MathModel obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(TaskStep obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(MathModel obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(TaskStep obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -35,7 +36,7 @@ public class MathModel : global::System.IDisposable {
     }
   }
 
-  ~MathModel() {
+  ~TaskStep() {
     Dispose(false);
   }
 
@@ -49,47 +50,51 @@ public class MathModel : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_MathModel(swigCPtr);
+          natural_uncertainty_libPINVOKE.delete_TaskStep(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public MathModel() : this(natural_uncertainty_libPINVOKE.new_MathModel__SWIG_0(), true) {
-  }
-
-  public MathModel(AlternativeList alternatives, UncertaintyList uncertainties) : this(natural_uncertainty_libPINVOKE.new_MathModel__SWIG_1(AlternativeList.getCPtr(alternatives), UncertaintyList.getCPtr(uncertainties)), true) {
+  public TaskStep(string type, string step) : this(natural_uncertainty_libPINVOKE.new_TaskStep__SWIG_0(type, step), true) {
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public MathModel(MathModel mathModel) : this(natural_uncertainty_libPINVOKE.new_MathModel__SWIG_2(MathModel.getCPtr(mathModel)), true) {
+  public TaskStep(string type, StringList row) : this(natural_uncertainty_libPINVOKE.new_TaskStep__SWIG_1(type, StringList.getCPtr(row)), true) {
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setAlternatives(AlternativeList alternatives) {
-    natural_uncertainty_libPINVOKE.MathModel_setAlternatives(swigCPtr, AlternativeList.getCPtr(alternatives));
+  public static TaskStep TextType(string step) {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_TextType(step);
+    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void setUncertainties(UncertaintyList uncertainties) {
-    natural_uncertainty_libPINVOKE.MathModel_setUncertainties(swigCPtr, UncertaintyList.getCPtr(uncertainties));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public AlternativeList getAlternatives() {
-    AlternativeList ret = new AlternativeList(natural_uncertainty_libPINVOKE.MathModel_getAlternatives(swigCPtr), true);
     return ret;
   }
 
-  public UncertaintyList getUncertainties() {
-    UncertaintyList ret = new UncertaintyList(natural_uncertainty_libPINVOKE.MathModel_getUncertainties(swigCPtr), true);
+  public static TaskStep TablePartType(string type, StringList row) {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_TablePartType(type, StringList.getCPtr(row));
+    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
+    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool isValid() {
-    bool ret = natural_uncertainty_libPINVOKE.MathModel_isValid(swigCPtr);
+  public static TaskStep EndTableType() {
+    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_EndTableType();
+    TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
     return ret;
   }
+
+  public string StepType() {
+    string ret = natural_uncertainty_libPINVOKE.TaskStep_StepType(swigCPtr);
+    return ret;
+  }
+
+  public string AsString() {
+    string ret = natural_uncertainty_libPINVOKE.TaskStep_AsString(swigCPtr);
+    return ret;
+  }
+
+}
 
 }

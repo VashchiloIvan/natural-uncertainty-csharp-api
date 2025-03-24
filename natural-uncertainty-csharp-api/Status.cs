@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
 public enum Status {
   Failed,
@@ -15,4 +16,6 @@ public enum Status {
   InvalidParameter,
   OneDecision,
   SomeDecisions
+}
+
 }

@@ -8,6 +8,9 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
 public class natural_uncertainty_lib {
+}
+
 }

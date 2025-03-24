@@ -8,21 +8,22 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
-public class Alternative : global::System.IDisposable {
+public class SolveStatus : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal Alternative(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal SolveStatus(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Alternative obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SolveStatus obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(Alternative obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(SolveStatus obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -35,7 +36,7 @@ public class Alternative : global::System.IDisposable {
     }
   }
 
-  ~Alternative() {
+  ~SolveStatus() {
     Dispose(false);
   }
 
@@ -49,50 +50,47 @@ public class Alternative : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_Alternative(swigCPtr);
+          natural_uncertainty_libPINVOKE.delete_SolveStatus(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public Alternative(string name, DoubleList marks) : this(natural_uncertainty_libPINVOKE.new_Alternative(name, DoubleList.getCPtr(marks)), true) {
+  public static SolveStatus OptimalDecisionResult(IntList bestAlternativeNum) {
+    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.SolveStatus_OptimalDecisionResult(IntList.getCPtr(bestAlternativeNum)), true);
     if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public string getName() {
-    string ret = natural_uncertainty_libPINVOKE.Alternative_getName(swigCPtr);
     return ret;
   }
 
-  public DoubleList getMarks() {
-    DoubleList ret = new DoubleList(natural_uncertainty_libPINVOKE.Alternative_getMarks(swigCPtr), true);
+  public static SolveStatus FailedResult() {
+    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.SolveStatus_FailedResult(), true);
     return ret;
   }
 
-  public void setMarks(DoubleList marks) {
-    natural_uncertainty_libPINVOKE.Alternative_setMarks(swigCPtr, DoubleList.getCPtr(marks));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public double minMark() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_minMark(swigCPtr);
+  public static SolveStatus InvalidModelResult() {
+    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.SolveStatus_InvalidModelResult(), true);
     return ret;
   }
 
-  public double maxMark() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_maxMark(swigCPtr);
+  public static SolveStatus InvalidParameterResult() {
+    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.SolveStatus_InvalidParameterResult(), true);
     return ret;
   }
 
-  public double sumOfMarks() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_sumOfMarks(swigCPtr);
+  public Status getStatus() {
+    Status ret = (Status)natural_uncertainty_libPINVOKE.SolveStatus_getStatus(swigCPtr);
     return ret;
   }
 
-  public double avgOfMarks() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_avgOfMarks(swigCPtr);
+  public IntList getBestAlternatives() {
+    IntList ret = new IntList(natural_uncertainty_libPINVOKE.SolveStatus_getBestAlternatives(swigCPtr), true);
     return ret;
   }
+
+  public SolveStatus() : this(natural_uncertainty_libPINVOKE.new_SolveStatus(), true) {
+  }
+
+}
 
 }

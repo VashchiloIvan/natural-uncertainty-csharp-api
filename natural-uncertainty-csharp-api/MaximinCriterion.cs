@@ -8,21 +8,20 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace NaturalUncertaintyCsharpApi {
 
-public class Criterion : global::System.IDisposable {
+public class MaximinCriterion : Criterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
 
-  internal Criterion(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
+  internal MaximinCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(natural_uncertainty_libPINVOKE.MaximinCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Criterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(MaximinCriterion obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(Criterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(MaximinCriterion obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -35,39 +34,28 @@ public class Criterion : global::System.IDisposable {
     }
   }
 
-  ~Criterion() {
-    Dispose(false);
-  }
-
-  public void Dispose() {
-    Dispose(true);
-    global::System.GC.SuppressFinalize(this);
-  }
-
-  protected virtual void Dispose(bool disposing) {
+  protected override void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_Criterion(swigCPtr);
+          natural_uncertainty_libPINVOKE.delete_MaximinCriterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
+      base.Dispose(disposing);
     }
   }
 
-  public void withLoggingProcess() {
-    natural_uncertainty_libPINVOKE.Criterion_withLoggingProcess(swigCPtr);
+  public MaximinCriterion(MathModel mathModel) : this(natural_uncertainty_libPINVOKE.new_MaximinCriterion(MathModel.getCPtr(mathModel)), true) {
+    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public TaskProcess getProcess() {
-    TaskProcess ret = new TaskProcess(natural_uncertainty_libPINVOKE.Criterion_getProcess(swigCPtr), true);
+  public override SolveStatus solve() {
+    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.MaximinCriterion_solve(swigCPtr), true);
     return ret;
   }
 
-  public virtual SolveStatus solve() {
-    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.Criterion_solve(swigCPtr), true);
-    return ret;
-  }
+}
 
 }
