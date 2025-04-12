@@ -10,20 +10,20 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class SolveStatus : global::System.IDisposable {
+public class ProbabilisticAlternative : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal SolveStatus(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal ProbabilisticAlternative(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SolveStatus obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(ProbabilisticAlternative obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(SolveStatus obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(ProbabilisticAlternative obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,7 +36,7 @@ public class SolveStatus : global::System.IDisposable {
     }
   }
 
-  ~SolveStatus() {
+  ~ProbabilisticAlternative() {
     Dispose(false);
   }
 
@@ -50,51 +50,55 @@ public class SolveStatus : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          libnatural_uncertaintyPINVOKE.delete_SolveStatus(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_ProbabilisticAlternative(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public static SolveStatus OptimalDecisionResult(IntList bestAlternativeNum) {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_OptimalDecisionResult(IntList.getCPtr(bestAlternativeNum)), true);
+  public ProbabilisticAlternative(string name, DoubleList marks, DoubleList probabilities) : this(libnatural_uncertaintyPINVOKE.new_ProbabilisticAlternative(name, DoubleList.getCPtr(marks), DoubleList.getCPtr(probabilities)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public bool isValid() {
+    bool ret = libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_isValid(swigCPtr);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SolveStatus FailedResult() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_FailedResult(), true);
+  public string getName() {
+    string ret = libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_getName(swigCPtr);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SolveStatus InvalidModelResult() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_InvalidModelResult(), true);
+  public DoubleList getMarks() {
+    DoubleList ret = new DoubleList(libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_getMarks(swigCPtr), true);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SolveStatus InvalidParameterResult() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_InvalidParameterResult(), true);
+  public DoubleList getProbabilities() {
+    DoubleList ret = new DoubleList(libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_getProbabilities(swigCPtr), true);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Status getStatus() {
-    Status ret = (Status)libnatural_uncertaintyPINVOKE.SolveStatus_getStatus(swigCPtr);
+  public void setMarks(DoubleList marks) {
+    libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_setMarks(swigCPtr, DoubleList.getCPtr(marks));
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
-  public IntList getBestAlternatives() {
-    IntList ret = new IntList(libnatural_uncertaintyPINVOKE.SolveStatus_getBestAlternatives(swigCPtr), true);
+  public void setProbabilities(DoubleList probabilities) {
+    libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_setProbabilities(swigCPtr, DoubleList.getCPtr(probabilities));
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
-  public SolveStatus() : this(libnatural_uncertaintyPINVOKE.new_SolveStatus(), true) {
+  public double getMathematicalExpectation() {
+    double ret = libnatural_uncertaintyPINVOKE.ProbabilisticAlternative_getMathematicalExpectation(swigCPtr);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
 }

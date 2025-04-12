@@ -10,20 +10,18 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class Uncertainty : global::System.IDisposable {
+public class BayesCriterion : ProbabilityCriterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
 
-  internal Uncertainty(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
+  internal BayesCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.BayesCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Uncertainty obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(BayesCriterion obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(Uncertainty obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(BayesCriterion obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,33 +34,25 @@ public class Uncertainty : global::System.IDisposable {
     }
   }
 
-  ~Uncertainty() {
-    Dispose(false);
-  }
-
-  public void Dispose() {
-    Dispose(true);
-    global::System.GC.SuppressFinalize(this);
-  }
-
-  protected virtual void Dispose(bool disposing) {
+  protected override void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          libnatural_uncertaintyPINVOKE.delete_Uncertainty(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_BayesCriterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
+      base.Dispose(disposing);
     }
   }
 
-  public Uncertainty(string name) : this(libnatural_uncertaintyPINVOKE.new_Uncertainty(name), true) {
+  public BayesCriterion(ProbabilisticModel mathModel) : this(libnatural_uncertaintyPINVOKE.new_BayesCriterion(ProbabilisticModel.getCPtr(mathModel)), true) {
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public string getName() {
-    string ret = libnatural_uncertaintyPINVOKE.Uncertainty_getName(swigCPtr);
+  public override SolveStatus solve() {
+    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.BayesCriterion_solve(swigCPtr), true);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -50,7 +50,7 @@ public class Criterion : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_Criterion(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_Criterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -58,16 +58,19 @@ public class Criterion : global::System.IDisposable {
   }
 
   public void withLoggingProcess() {
-    natural_uncertainty_libPINVOKE.Criterion_withLoggingProcess(swigCPtr);
+    libnatural_uncertaintyPINVOKE.Criterion_withLoggingProcess(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public TaskProcess getProcess() {
-    TaskProcess ret = new TaskProcess(natural_uncertainty_libPINVOKE.Criterion_getProcess(swigCPtr), true);
+    TaskProcess ret = new TaskProcess(libnatural_uncertaintyPINVOKE.Criterion_getProcess(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual SolveStatus solve() {
-    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.Criterion_solve(swigCPtr), true);
+    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.Criterion_solve(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

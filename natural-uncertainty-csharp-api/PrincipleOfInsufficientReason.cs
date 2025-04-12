@@ -13,7 +13,7 @@ namespace NaturalUncertaintyCsharpApi {
 public class PrincipleOfInsufficientReason : Criterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal PrincipleOfInsufficientReason(global::System.IntPtr cPtr, bool cMemoryOwn) : base(natural_uncertainty_libPINVOKE.PrincipleOfInsufficientReason_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal PrincipleOfInsufficientReason(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.PrincipleOfInsufficientReason_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -39,7 +39,7 @@ public class PrincipleOfInsufficientReason : Criterion {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_PrincipleOfInsufficientReason(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_PrincipleOfInsufficientReason(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -47,12 +47,13 @@ public class PrincipleOfInsufficientReason : Criterion {
     }
   }
 
-  public PrincipleOfInsufficientReason(MathModel mathModel) : this(natural_uncertainty_libPINVOKE.new_PrincipleOfInsufficientReason(MathModel.getCPtr(mathModel)), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public PrincipleOfInsufficientReason(MathModel mathModel) : this(libnatural_uncertaintyPINVOKE.new_PrincipleOfInsufficientReason(MathModel.getCPtr(mathModel)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override SolveStatus solve() {
-    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.PrincipleOfInsufficientReason_solve(swigCPtr), true);
+    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.PrincipleOfInsufficientReason_solve(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

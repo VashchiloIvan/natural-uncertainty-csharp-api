@@ -51,7 +51,7 @@ public class IntList : global::System.IDisposable, global::System.Collections.IE
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_IntList(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_IntList(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -236,131 +236,143 @@ public class IntList : global::System.IDisposable, global::System.Collections.IE
     }
   }
 
-  public IntList() : this(natural_uncertainty_libPINVOKE.new_IntList__SWIG_0(), true) {
+  public IntList() : this(libnatural_uncertaintyPINVOKE.new_IntList__SWIG_0(), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public IntList(IntList other) : this(natural_uncertainty_libPINVOKE.new_IntList__SWIG_1(IntList.getCPtr(other)), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public IntList(IntList other) : this(libnatural_uncertaintyPINVOKE.new_IntList__SWIG_1(IntList.getCPtr(other)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Clear() {
-    natural_uncertainty_libPINVOKE.IntList_Clear(swigCPtr);
+    libnatural_uncertaintyPINVOKE.IntList_Clear(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Add(int x) {
-    natural_uncertainty_libPINVOKE.IntList_Add(swigCPtr, x);
+    libnatural_uncertaintyPINVOKE.IntList_Add(swigCPtr, x);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = natural_uncertainty_libPINVOKE.IntList_size(swigCPtr);
+    uint ret = libnatural_uncertaintyPINVOKE.IntList_size(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private bool empty() {
-    bool ret = natural_uncertainty_libPINVOKE.IntList_empty(swigCPtr);
+    bool ret = libnatural_uncertaintyPINVOKE.IntList_empty(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint capacity() {
-    uint ret = natural_uncertainty_libPINVOKE.IntList_capacity(swigCPtr);
+    uint ret = libnatural_uncertaintyPINVOKE.IntList_capacity(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void reserve(uint n) {
-    natural_uncertainty_libPINVOKE.IntList_reserve(swigCPtr, n);
+    libnatural_uncertaintyPINVOKE.IntList_reserve(swigCPtr, n);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public IntList(int capacity) : this(natural_uncertainty_libPINVOKE.new_IntList__SWIG_2(capacity), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public IntList(int capacity) : this(libnatural_uncertaintyPINVOKE.new_IntList__SWIG_2(capacity), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private int getitemcopy(int index) {
-    int ret = natural_uncertainty_libPINVOKE.IntList_getitemcopy(swigCPtr, index);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    int ret = libnatural_uncertaintyPINVOKE.IntList_getitemcopy(swigCPtr, index);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private int getitem(int index) {
-    int ret = natural_uncertainty_libPINVOKE.IntList_getitem(swigCPtr, index);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    int ret = libnatural_uncertaintyPINVOKE.IntList_getitem(swigCPtr, index);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, int val) {
-    natural_uncertainty_libPINVOKE.IntList_setitem(swigCPtr, index, val);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_setitem(swigCPtr, index, val);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(IntList values) {
-    natural_uncertainty_libPINVOKE.IntList_AddRange(swigCPtr, IntList.getCPtr(values));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_AddRange(swigCPtr, IntList.getCPtr(values));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public IntList GetRange(int index, int count) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.IntList_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = libnatural_uncertaintyPINVOKE.IntList_GetRange(swigCPtr, index, count);
     IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, true);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, int x) {
-    natural_uncertainty_libPINVOKE.IntList_Insert(swigCPtr, index, x);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_Insert(swigCPtr, index, x);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, IntList values) {
-    natural_uncertainty_libPINVOKE.IntList_InsertRange(swigCPtr, index, IntList.getCPtr(values));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_InsertRange(swigCPtr, index, IntList.getCPtr(values));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    natural_uncertainty_libPINVOKE.IntList_RemoveAt(swigCPtr, index);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_RemoveAt(swigCPtr, index);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    natural_uncertainty_libPINVOKE.IntList_RemoveRange(swigCPtr, index, count);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_RemoveRange(swigCPtr, index, count);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static IntList Repeat(int value, int count) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.IntList_Repeat(value, count);
+    global::System.IntPtr cPtr = libnatural_uncertaintyPINVOKE.IntList_Repeat(value, count);
     IntList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntList(cPtr, true);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    natural_uncertainty_libPINVOKE.IntList_Reverse__SWIG_0(swigCPtr);
+    libnatural_uncertaintyPINVOKE.IntList_Reverse__SWIG_0(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse(int index, int count) {
-    natural_uncertainty_libPINVOKE.IntList_Reverse__SWIG_1(swigCPtr, index, count);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_Reverse__SWIG_1(swigCPtr, index, count);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, IntList values) {
-    natural_uncertainty_libPINVOKE.IntList_SetRange(swigCPtr, index, IntList.getCPtr(values));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.IntList_SetRange(swigCPtr, index, IntList.getCPtr(values));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool Contains(int value) {
-    bool ret = natural_uncertainty_libPINVOKE.IntList_Contains(swigCPtr, value);
+    bool ret = libnatural_uncertaintyPINVOKE.IntList_Contains(swigCPtr, value);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(int value) {
-    int ret = natural_uncertainty_libPINVOKE.IntList_IndexOf(swigCPtr, value);
+    int ret = libnatural_uncertaintyPINVOKE.IntList_IndexOf(swigCPtr, value);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(int value) {
-    int ret = natural_uncertainty_libPINVOKE.IntList_LastIndexOf(swigCPtr, value);
+    int ret = libnatural_uncertaintyPINVOKE.IntList_LastIndexOf(swigCPtr, value);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(int value) {
-    bool ret = natural_uncertainty_libPINVOKE.IntList_Remove(swigCPtr, value);
+    bool ret = libnatural_uncertaintyPINVOKE.IntList_Remove(swigCPtr, value);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

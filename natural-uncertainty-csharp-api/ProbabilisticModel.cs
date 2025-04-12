@@ -10,20 +10,20 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class SolveStatus : global::System.IDisposable {
+public class ProbabilisticModel : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal SolveStatus(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal ProbabilisticModel(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SolveStatus obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(ProbabilisticModel obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(SolveStatus obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(ProbabilisticModel obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,7 +36,7 @@ public class SolveStatus : global::System.IDisposable {
     }
   }
 
-  ~SolveStatus() {
+  ~ProbabilisticModel() {
     Dispose(false);
   }
 
@@ -50,51 +50,51 @@ public class SolveStatus : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          libnatural_uncertaintyPINVOKE.delete_SolveStatus(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_ProbabilisticModel(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public static SolveStatus OptimalDecisionResult(IntList bestAlternativeNum) {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_OptimalDecisionResult(IntList.getCPtr(bestAlternativeNum)), true);
+  public ProbabilisticModel() : this(libnatural_uncertaintyPINVOKE.new_ProbabilisticModel__SWIG_0(), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ProbabilisticModel(ProbabilisticAlternativeList alternatives, UncertaintyList uncertainties) : this(libnatural_uncertaintyPINVOKE.new_ProbabilisticModel__SWIG_1(ProbabilisticAlternativeList.getCPtr(alternatives), UncertaintyList.getCPtr(uncertainties)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ProbabilisticModel(ProbabilisticModel mathModel) : this(libnatural_uncertaintyPINVOKE.new_ProbabilisticModel__SWIG_2(ProbabilisticModel.getCPtr(mathModel)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void setAlternatives(ProbabilisticAlternativeList alternatives) {
+    libnatural_uncertaintyPINVOKE.ProbabilisticModel_setAlternatives(swigCPtr, ProbabilisticAlternativeList.getCPtr(alternatives));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void setUncertainties(UncertaintyList uncertainties) {
+    libnatural_uncertaintyPINVOKE.ProbabilisticModel_setUncertainties(swigCPtr, UncertaintyList.getCPtr(uncertainties));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ProbabilisticAlternativeList getAlternatives() {
+    ProbabilisticAlternativeList ret = new ProbabilisticAlternativeList(libnatural_uncertaintyPINVOKE.ProbabilisticModel_getAlternatives(swigCPtr), true);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SolveStatus FailedResult() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_FailedResult(), true);
+  public UncertaintyList getUncertainties() {
+    UncertaintyList ret = new UncertaintyList(libnatural_uncertaintyPINVOKE.ProbabilisticModel_getUncertainties(swigCPtr), true);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SolveStatus InvalidModelResult() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_InvalidModelResult(), true);
+  public bool isValid() {
+    bool ret = libnatural_uncertaintyPINVOKE.ProbabilisticModel_isValid(swigCPtr);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
-  }
-
-  public static SolveStatus InvalidParameterResult() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.SolveStatus_InvalidParameterResult(), true);
-    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public Status getStatus() {
-    Status ret = (Status)libnatural_uncertaintyPINVOKE.SolveStatus_getStatus(swigCPtr);
-    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public IntList getBestAlternatives() {
-    IntList ret = new IntList(libnatural_uncertaintyPINVOKE.SolveStatus_getBestAlternatives(swigCPtr), true);
-    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public SolveStatus() : this(libnatural_uncertaintyPINVOKE.new_SolveStatus(), true) {
-    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

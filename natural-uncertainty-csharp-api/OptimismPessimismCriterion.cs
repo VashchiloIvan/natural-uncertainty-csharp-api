@@ -13,7 +13,7 @@ namespace NaturalUncertaintyCsharpApi {
 public class OptimismPessimismCriterion : Criterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal OptimismPessimismCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(natural_uncertainty_libPINVOKE.OptimismPessimismCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal OptimismPessimismCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.OptimismPessimismCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -39,7 +39,7 @@ public class OptimismPessimismCriterion : Criterion {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_OptimismPessimismCriterion(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_OptimismPessimismCriterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -47,12 +47,13 @@ public class OptimismPessimismCriterion : Criterion {
     }
   }
 
-  public OptimismPessimismCriterion(MathModel mathModel, double optimismKoef) : this(natural_uncertainty_libPINVOKE.new_OptimismPessimismCriterion(MathModel.getCPtr(mathModel), optimismKoef), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public OptimismPessimismCriterion(MathModel mathModel, double optimismKoef) : this(libnatural_uncertaintyPINVOKE.new_OptimismPessimismCriterion(MathModel.getCPtr(mathModel), optimismKoef), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override SolveStatus solve() {
-    SolveStatus ret = new SolveStatus(natural_uncertainty_libPINVOKE.OptimismPessimismCriterion_solve(swigCPtr), true);
+    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.OptimismPessimismCriterion_solve(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

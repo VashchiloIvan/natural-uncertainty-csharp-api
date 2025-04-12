@@ -50,49 +50,55 @@ public class Alternative : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_Alternative(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_Alternative(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public Alternative(string name, DoubleList marks) : this(natural_uncertainty_libPINVOKE.new_Alternative(name, DoubleList.getCPtr(marks)), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public Alternative(string name, DoubleList marks) : this(libnatural_uncertaintyPINVOKE.new_Alternative(name, DoubleList.getCPtr(marks)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public string getName() {
-    string ret = natural_uncertainty_libPINVOKE.Alternative_getName(swigCPtr);
+    string ret = libnatural_uncertaintyPINVOKE.Alternative_getName(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public DoubleList getMarks() {
-    DoubleList ret = new DoubleList(natural_uncertainty_libPINVOKE.Alternative_getMarks(swigCPtr), true);
+    DoubleList ret = new DoubleList(libnatural_uncertaintyPINVOKE.Alternative_getMarks(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void setMarks(DoubleList marks) {
-    natural_uncertainty_libPINVOKE.Alternative_setMarks(swigCPtr, DoubleList.getCPtr(marks));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.Alternative_setMarks(swigCPtr, DoubleList.getCPtr(marks));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double minMark() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_minMark(swigCPtr);
+    double ret = libnatural_uncertaintyPINVOKE.Alternative_minMark(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double maxMark() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_maxMark(swigCPtr);
+    double ret = libnatural_uncertaintyPINVOKE.Alternative_maxMark(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double sumOfMarks() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_sumOfMarks(swigCPtr);
+    double ret = libnatural_uncertaintyPINVOKE.Alternative_sumOfMarks(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double avgOfMarks() {
-    double ret = natural_uncertainty_libPINVOKE.Alternative_avgOfMarks(swigCPtr);
+    double ret = libnatural_uncertaintyPINVOKE.Alternative_avgOfMarks(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

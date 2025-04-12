@@ -50,46 +50,50 @@ public class MathModel : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_MathModel(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_MathModel(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public MathModel() : this(natural_uncertainty_libPINVOKE.new_MathModel__SWIG_0(), true) {
+  public MathModel() : this(libnatural_uncertaintyPINVOKE.new_MathModel__SWIG_0(), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public MathModel(AlternativeList alternatives, UncertaintyList uncertainties) : this(natural_uncertainty_libPINVOKE.new_MathModel__SWIG_1(AlternativeList.getCPtr(alternatives), UncertaintyList.getCPtr(uncertainties)), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public MathModel(AlternativeList alternatives, UncertaintyList uncertainties) : this(libnatural_uncertaintyPINVOKE.new_MathModel__SWIG_1(AlternativeList.getCPtr(alternatives), UncertaintyList.getCPtr(uncertainties)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public MathModel(MathModel mathModel) : this(natural_uncertainty_libPINVOKE.new_MathModel__SWIG_2(MathModel.getCPtr(mathModel)), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public MathModel(MathModel mathModel) : this(libnatural_uncertaintyPINVOKE.new_MathModel__SWIG_2(MathModel.getCPtr(mathModel)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void setAlternatives(AlternativeList alternatives) {
-    natural_uncertainty_libPINVOKE.MathModel_setAlternatives(swigCPtr, AlternativeList.getCPtr(alternatives));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.MathModel_setAlternatives(swigCPtr, AlternativeList.getCPtr(alternatives));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void setUncertainties(UncertaintyList uncertainties) {
-    natural_uncertainty_libPINVOKE.MathModel_setUncertainties(swigCPtr, UncertaintyList.getCPtr(uncertainties));
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    libnatural_uncertaintyPINVOKE.MathModel_setUncertainties(swigCPtr, UncertaintyList.getCPtr(uncertainties));
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public AlternativeList getAlternatives() {
-    AlternativeList ret = new AlternativeList(natural_uncertainty_libPINVOKE.MathModel_getAlternatives(swigCPtr), true);
+    AlternativeList ret = new AlternativeList(libnatural_uncertaintyPINVOKE.MathModel_getAlternatives(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public UncertaintyList getUncertainties() {
-    UncertaintyList ret = new UncertaintyList(natural_uncertainty_libPINVOKE.MathModel_getUncertainties(swigCPtr), true);
+    UncertaintyList ret = new UncertaintyList(libnatural_uncertaintyPINVOKE.MathModel_getUncertainties(swigCPtr), true);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool isValid() {
-    bool ret = natural_uncertainty_libPINVOKE.MathModel_isValid(swigCPtr);
+    bool ret = libnatural_uncertaintyPINVOKE.MathModel_isValid(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

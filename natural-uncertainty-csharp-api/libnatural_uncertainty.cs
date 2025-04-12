@@ -10,7 +10,7 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class natural_uncertainty_lib {
+public class libnatural_uncertainty {
 }
 
 }

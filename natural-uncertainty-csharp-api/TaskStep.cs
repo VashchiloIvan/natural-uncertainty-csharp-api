@@ -50,48 +50,51 @@ public class TaskStep : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          natural_uncertainty_libPINVOKE.delete_TaskStep(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_TaskStep(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public TaskStep(string type, string step) : this(natural_uncertainty_libPINVOKE.new_TaskStep__SWIG_0(type, step), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public TaskStep(string type, string step) : this(libnatural_uncertaintyPINVOKE.new_TaskStep__SWIG_0(type, step), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public TaskStep(string type, StringList row) : this(natural_uncertainty_libPINVOKE.new_TaskStep__SWIG_1(type, StringList.getCPtr(row)), true) {
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+  public TaskStep(string type, StringList row) : this(libnatural_uncertaintyPINVOKE.new_TaskStep__SWIG_1(type, StringList.getCPtr(row)), true) {
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static TaskStep TextType(string step) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_TextType(step);
+    global::System.IntPtr cPtr = libnatural_uncertaintyPINVOKE.TaskStep_TextType(step);
     TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static TaskStep TablePartType(string type, StringList row) {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_TablePartType(type, StringList.getCPtr(row));
+    global::System.IntPtr cPtr = libnatural_uncertaintyPINVOKE.TaskStep_TablePartType(type, StringList.getCPtr(row));
     TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
-    if (natural_uncertainty_libPINVOKE.SWIGPendingException.Pending) throw natural_uncertainty_libPINVOKE.SWIGPendingException.Retrieve();
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static TaskStep EndTableType() {
-    global::System.IntPtr cPtr = natural_uncertainty_libPINVOKE.TaskStep_EndTableType();
+    global::System.IntPtr cPtr = libnatural_uncertaintyPINVOKE.TaskStep_EndTableType();
     TaskStep ret = (cPtr == global::System.IntPtr.Zero) ? null : new TaskStep(cPtr, false);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public string StepType() {
-    string ret = natural_uncertainty_libPINVOKE.TaskStep_StepType(swigCPtr);
+    string ret = libnatural_uncertaintyPINVOKE.TaskStep_StepType(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public string AsString() {
-    string ret = natural_uncertainty_libPINVOKE.TaskStep_AsString(swigCPtr);
+    string ret = libnatural_uncertaintyPINVOKE.TaskStep_AsString(swigCPtr);
+    if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
