@@ -10,18 +10,18 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class BayesCriterion : ProbabilityCriterion {
+public class AverageResultCriterion : ProbabilityCriterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal BayesCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.BayesCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal AverageResultCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.AverageResultCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(BayesCriterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(AverageResultCriterion obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(BayesCriterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(AverageResultCriterion obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -39,7 +39,7 @@ public class BayesCriterion : ProbabilityCriterion {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          libnatural_uncertaintyPINVOKE.delete_BayesCriterion(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_AverageResultCriterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -47,12 +47,12 @@ public class BayesCriterion : ProbabilityCriterion {
     }
   }
 
-  public BayesCriterion(ProbabilisticModel mathModel) : this(libnatural_uncertaintyPINVOKE.new_BayesCriterion(ProbabilisticModel.getCPtr(mathModel)), true) {
+  public AverageResultCriterion(ProbabilisticModel mathModel) : this(libnatural_uncertaintyPINVOKE.new_AverageResultCriterion(ProbabilisticModel.getCPtr(mathModel)), true) {
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override SolveStatus solve() {
-    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.BayesCriterion_solve(swigCPtr), true);
+    SolveStatus ret = new SolveStatus(libnatural_uncertaintyPINVOKE.AverageResultCriterion_solve(swigCPtr), true);
     if (libnatural_uncertaintyPINVOKE.SWIGPendingException.Pending) throw libnatural_uncertaintyPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

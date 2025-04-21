@@ -940,14 +940,14 @@ class libnatural_uncertaintyPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_delete_ProbabilityCriterion")]
   public static extern void delete_ProbabilityCriterion(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_new_BayesCriterion")]
-  public static extern global::System.IntPtr new_BayesCriterion(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_new_AverageResultCriterion")]
+  public static extern global::System.IntPtr new_AverageResultCriterion(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_BayesCriterion_solve")]
-  public static extern global::System.IntPtr BayesCriterion_solve(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_AverageResultCriterion_solve")]
+  public static extern global::System.IntPtr AverageResultCriterion_solve(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_delete_BayesCriterion")]
-  public static extern void delete_BayesCriterion(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_delete_AverageResultCriterion")]
+  public static extern void delete_AverageResultCriterion(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_MaximinCriterion_SWIGUpcast")]
   public static extern global::System.IntPtr MaximinCriterion_SWIGUpcast(global::System.IntPtr jarg1);
@@ -958,8 +958,8 @@ class libnatural_uncertaintyPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_PrincipleOfInsufficientReason_SWIGUpcast")]
   public static extern global::System.IntPtr PrincipleOfInsufficientReason_SWIGUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_BayesCriterion_SWIGUpcast")]
-  public static extern global::System.IntPtr BayesCriterion_SWIGUpcast(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("libnatural_uncertainty", EntryPoint="CSharp_NaturalUncertaintyCsharpApi_AverageResultCriterion_SWIGUpcast")]
+  public static extern global::System.IntPtr AverageResultCriterion_SWIGUpcast(global::System.IntPtr jarg1);
 }
 
 }
