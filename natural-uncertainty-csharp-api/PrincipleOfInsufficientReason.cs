@@ -10,7 +10,7 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class PrincipleOfInsufficientReason : Criterion {
+public class PrincipleOfInsufficientReason : UncertaintyCriterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
   internal PrincipleOfInsufficientReason(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.PrincipleOfInsufficientReason_SWIGUpcast(cPtr), cMemoryOwn) {

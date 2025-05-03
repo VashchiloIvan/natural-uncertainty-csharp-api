@@ -10,7 +10,7 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class OptimismPessimismCriterion : Criterion {
+public class OptimismPessimismCriterion : UncertaintyCriterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
   internal OptimismPessimismCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.OptimismPessimismCriterion_SWIGUpcast(cPtr), cMemoryOwn) {

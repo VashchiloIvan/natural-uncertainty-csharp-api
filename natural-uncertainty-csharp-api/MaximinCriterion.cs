@@ -10,7 +10,7 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class MaximinCriterion : Criterion {
+public class MaximinCriterion : UncertaintyCriterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
   internal MaximinCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.MaximinCriterion_SWIGUpcast(cPtr), cMemoryOwn) {

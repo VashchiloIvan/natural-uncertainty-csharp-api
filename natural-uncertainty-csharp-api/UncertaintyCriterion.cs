@@ -10,18 +10,18 @@
 
 namespace NaturalUncertaintyCsharpApi {
 
-public class ProbabilityCriterion : Criterion {
+public class UncertaintyCriterion : Criterion {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ProbabilityCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.ProbabilityCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal UncertaintyCriterion(global::System.IntPtr cPtr, bool cMemoryOwn) : base(libnatural_uncertaintyPINVOKE.UncertaintyCriterion_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(ProbabilityCriterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(UncertaintyCriterion obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(ProbabilityCriterion obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(UncertaintyCriterion obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -39,7 +39,7 @@ public class ProbabilityCriterion : Criterion {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          libnatural_uncertaintyPINVOKE.delete_ProbabilityCriterion(swigCPtr);
+          libnatural_uncertaintyPINVOKE.delete_UncertaintyCriterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
